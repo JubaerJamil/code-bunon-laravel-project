@@ -1,0 +1,164 @@
+.preloader {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #2980b9;
+}
+
+.spinner {
+    display: flex;
+    margin-left: 50%;
+    color: white;
+    font-size: 3rem;
+    text-transform: uppercase;
+
+    span {
+      padding: 0 22px;
+      margin: 1px;
+      line-height: 100px;
+      border-radius: 8px;
+      font-weight: bold;
+      background: #34495e;
+      animation: bulge 2s infinite;
+    }
+  }
+
+  /* For tablets (max width 1024px) */
+@media (max-width: 1024px) {
+    .spinner {
+        margin-left: 40%; /* Tablet view */
+    }
+}
+
+/* For mobile devices (max width 600px) */
+@media (max-width: 600px) {
+    .spinner {
+        margin-left: 30%; /* Mobile view */
+    }
+}
+/* loader end */
+
+.cartButton {
+    padding: 8px 16px;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: white;
+    border-radius: 50px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(255, 75, 43, 0.4);
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cartButton::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cartButton:hover {
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    box-shadow: 0 12px 20px rgba(255, 75, 43, 0.6);
+    transform: translateY(-3px);
+}
+
+.cartButton:focus {
+    outline: none;
+}
+
+.cartButton:active::before {
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+}
+
+.cartButton:active {
+    transform: translateY(2px);
+    box-shadow: 0 6px 10px rgba(255, 75, 43, 0.3);
+}
+/* cart button end */
+
+.cart-container {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-countt {
+    position: absolute;
+    top: 0px;
+    right: -8px;
+    background-color: rgb(241, 222, 46);
+    font-size: 14px;
+    padding: 0px 6px;
+    border-radius: 50%;
+    font-weight: bold;
+    border: 2px solid white;
+}
+/* cart header end */
+
+/* slider messale */
+.breaking-news {
+    background-color: white;
+    color: rgb(241, 97, 97);
+    padding: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px; /* Set a height for the container */
+    position: relative;
+    font-size: 25px;
+  }
+
+  .news-text {
+    display: inline-block;
+    position: absolute;
+    white-space: nowrap;
+    top: 50%; /* Vertically center the text */
+    transform: translateY(-50%); /* Adjust positioning to be exactly centered */
+  }
+
+  /* misson and vission css  */
+
+  .about-area {
+    background-color: #ffffff;
+}
+
+.mission, .vision {
+    background-color: #ffffff;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.mission:hover, .vision:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mission h3, .vision h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.peragraph {
+    line-height: 1.8;
+    font-size: 16px;
+    color: #161616;
+}
+
+.border-bottom {
+    border-bottom: 2px solid #ddd;
+}
