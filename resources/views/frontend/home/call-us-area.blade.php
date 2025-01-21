@@ -4,7 +4,7 @@
             <div class="col-lg-6">
                 <div class="call-contact">
                     <h3>Call Us 24/7</h3>
-                    <a href="+88 01710-855-446" class="call-btn">+88 01710-855-446</a>
+                    <a href="tel:88 01710-855-446" class="call-btn">+88 01710-855-446</a>
                     <p>We’re always here to help you with your queries and support. Reach out to us anytime, and let’s work together to bring your ideas to life!
                     </p>
                     <a href="{{ url('/contact') }}" class="default-btn btn-bg-two border-radius-5">Contact Us</a>

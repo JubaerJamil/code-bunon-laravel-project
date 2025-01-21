@@ -14,13 +14,17 @@
         <div class="row pt-45">
 
             @foreach ($allService as $service)
-                <div class="col-lg-3 col-sm-6">
+            <div class="col-lg-3 col-sm-6">
+                <a href="{{ Route('service_content',$service->slug)}}">
                     <div class="services-card">
-                        <i class='{{$service->icon}}'></i>
-                        <h3><a href="{{ Route('service_content',$service->slug)}}">{{$service->title}}</a></h3>
-                        {{ \Illuminate\Support\Str::limit(strip_tags($service->content), 80) }}... <br>
-                        <a href="{{ Route('service_content',$service->slug)}}" class="learn-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+                        <i class="{{$service->icon}}"></i>
+                        <h3><p style="font-weight: 600">{{$service->title}}</p></h3>
+
+                        <p class="mb-0">{{ \Illuminate\Support\Str::limit(strip_tags($service->content), 80) }}...<br></p>
+
+                        <span class="learn-btn">Learn More <i class="bx bx-chevron-right"></i></span>
                     </div>
+                </a>
                 </div>
             @endforeach
 

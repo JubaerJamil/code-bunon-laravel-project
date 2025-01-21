@@ -6,9 +6,9 @@ use App\Http\Controllers\frontend\HomeController;
 
 
 Route::get('/', [HomeController::class, 'homePage'])->name('home_page');
-Route::get('/service-page', [HomeController::class, 'servicePage'])->name('service-page');
+Route::get('/services', [HomeController::class, 'servicePage'])->name('service-page');
 
-Route::get('/frontend/service-details/{slug}', [HomeController::class, 'serviceDetailsPage'])->name('service_content');
+Route::get('/service/{slug}', [HomeController::class, 'serviceDetailsPage'])->name('service_content');
 
 Route::get('/about', [HomeController::class, 'aboutPage'])->name('about_page');
 Route::get('/blog', [HomeController::class, 'blogPage'])->name('blog_page');

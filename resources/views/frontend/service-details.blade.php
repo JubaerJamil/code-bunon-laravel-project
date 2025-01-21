@@ -47,9 +47,9 @@
                             <div class="side-bar-categories">
                                 <ul>
                                     @foreach ($allService as $service)
-                                    <li>
-                                        <div class="line-circle"></div>
-                                        <a href="{{ Route('service_content',$service->slug)}}">{{$service->title}}</a>
+                                    <li class="d-flex justify-content-end">
+                                        <i class='fs-5 bx bxs-right-arrow-circle' style="color: rgb(0,113,220); margin-top: 6px;"></i>
+                                        <a href="{{ Route('service_content',$service->slug)}}" style="margin-left: -18px;">{{$service->title}}</a>
                                     </li>
                                     @endforeach
                                 </ul>

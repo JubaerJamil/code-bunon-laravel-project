@@ -28,6 +28,8 @@
                                     <th class="fs-6" style="color: black">Client Name</th>
                                     <th class="fs-6" style="color: black">E-mail</th>
                                     <th class="fs-6" style="color: black">Phone Number</th>
+                                    <th class="fs-6" style="color: black">City</th>
+                                    <th class="fs-6" style="color: black">Country</th>
                                     <th class="fs-6" style="color: black">Subject</th>
                                     <th class="fs-6" style="color: black">Message</th>
                                     <th class="fs-6" style="color: black">Action</th>
@@ -41,7 +43,7 @@
                                             {{ $index + 1 }}
                                         </td>
 
-                                        <td>{{ date('d-M-Y / H:i A', strtotime($item->created_at)) }}</td>
+                                        <td>{{ date('d-M-Y / h:i A', strtotime($item->created_at)) }}</td>
 
                                         <td>{{ $item->name }}</td>
 
@@ -50,11 +52,14 @@
                                             {{ $item->email }}
                                         </td>
 
-                                        <td>{{ $item->phone }}
-                                        </td>
+                                        <td>{{ $item->phone }}</td>
+
+                                        <td>{{ $item->city }}</td>
+
+                                        <td>{{ $item->country }}</td>
 
                                         <td>{{ $item->subject }}</td>
-                                        <td><textarea class="form-control" cols="30" rows="2">{{ $item->message }}</textarea></td>
+                                        <td><textarea class="form-control" cols="60" rows="2">{{ $item->message }}</textarea></td>
 
                                         <td class="text-sm">
                                             <a onclick="return confirm('Are you sure Delete?')"

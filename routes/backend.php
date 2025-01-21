@@ -46,13 +46,13 @@ Route::controller(ContactController::class)->group(function(){
 });
 
 Route::controller(NewsLetterController::class)->group(function(){
-    Route::get('/admin/message-list', 'index')->name('message_List');
-    Route::get('frontend/contact-message-page', 'create')->name('contact_message_Page');
-    Route::post('frontend/newLetter/store', 'emailStore')->name('message_Store');
+    // Route::get('/admin/message-list', 'index')->name('message_List');
+    // Route::get('frontend/contact-message-page', 'create')->name('contact_message_Page');
+    // Route::post('frontend/newLetter/store', 'emailStore')->name('message_Store');
     // Route::get('admin/service-edit-page/{id}', 'edit')->name('service_edit_Page');
     // Route::get('admin/service-show-page/{id}', 'show')->name('service_show_Page');
     // Route::post('admin/service/update/{id}', 'update')->name('service_slider_Update');
-    Route::get('admin/contact-message/delete/{id}', 'destroy')->name('contact_Message_Delete');
+    // Route::get('admin/contact-message/delete/{id}', 'destroy')->name('contact_Message_Delete');
 
 });
 

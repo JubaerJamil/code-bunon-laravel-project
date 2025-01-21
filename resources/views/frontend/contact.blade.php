@@ -37,7 +37,7 @@
                             <div class="content">
                                 <i class="bx bx-phone-call"></i>
                                 <h3>Phone Number</h3>
-                                <p>+88 01710-855-446</p>
+                                <a href="tel:88 01710-855-446" class="call-btn">+88 01710-855-446</a>
                             </div>
                         </li>
                         <li>
@@ -64,7 +64,7 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label>Your Name <span>*</span></label>
+                                    <label>Name <span>*</span></label>
                                     <input type="text" name="name" id="name" class="form-control" required placeholder="Name" value="{{ old('name')}}">
                                     @error('name')
                                     <div class="form-text text-danger">{{ $message }}</div>
@@ -74,7 +74,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label>Your Email <span>*</span></label>
+                                    <label>Email <span>*</span></label>
                                     <input type="email" name="email" id="email" class="form-control" required placeholder="Email" value="{{ old('email')}}">
                                     @error('email')
                                     <div class="form-text text-danger">{{ $message }}</div>
@@ -92,11 +92,36 @@
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
+
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label>Your Subject <span>*</span></label>
-                                    <input type="text" name="msg_subject" id="msg_subject" class="form-control" required placeholder="Your Subject" value="{{ old('msg_subject')}}">
-                                    @error('msg_subject')
+                                    <label>City <span>*</span></label>
+                                    <input type="text" name="city" id="city" class="form-control" required placeholder="City Name" value="{{ old('city')}}">
+                                    @error('city')
+                                    <div class="form-text text-danger">{{ $message }}</div>
+                                    @enderror
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Conutry <span></span></label>
+                                    <input type="text" name="country" id="country" class="form-control" placeholder="Country Name" value="{{ old('country')}}">
+                                    @error('country')
+                                    <div class="form-text text-danger">{{ $message }}</div>
+                                    @enderror
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Subject <span>*</span></label>
+                                    <input type="text" name="subject" id="subject" class="form-control" required placeholder="Your Subject" value="{{ old('subject')}}">
+                                    @error('subject')
                                     <div class="form-text text-danger">{{ $message }}</div>
                                     @enderror
                                     <div class="help-block with-errors"></div>
@@ -104,7 +129,7 @@
                             </div>
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
-                                    <label>Your Message <span>*</span></label>
+                                    <label>Message <span>*</span></label>
                                     <textarea name="message" class="form-control" id="message" cols="30" rows="8" required placeholder="Your Message">{{ old('message')}}</textarea>
                                     @error('message')
                                     <div class="form-text text-danger">{{ $message }}</div>
@@ -112,14 +137,6 @@
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
-                            {{-- <div class="col-lg-12 col-md-12">
-                                <div class="agree-label">
-                                    <input type="checkbox" id="chb1">
-                                    <label for="chb1">
-                                        Accept <a href="terms-condition.html">Terms & Conditions</a> And <a href="privacy-policy.html">Privacy Policy.</a>
-                                    </label>
-                                </div>
-                            </div> --}}
                             <div class="col-lg-12 col-md-12 text-center">
                                 <button type="submit" class="default-btn btn-bg-two border-radius-50">
                                 Send Message <i class="bx bx-chevron-right"></i>

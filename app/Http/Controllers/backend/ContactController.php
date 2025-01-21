@@ -34,20 +34,30 @@ class ContactController extends Controller
         $request->validate([
             'name' => 'required|string|max:45|regex:/^[a-zA-Z\s]+$/',
             'email' => 'required|string|email|max:191',
-            'phone_number' => 'string|min:11|max:17|regex:/^\d+$/',
-            'msg_subject' => 'required|string|max:255|regex:/^[a-zA-Z0-9\s]+$/',
+            'phone_number' => 'string|min:7|max:17|regex:/^\+?[\d\s\-\(\)]+$/',
+            'city' => 'required|string|max:55|regex:/^[a-zA-Z\s]+$/',
+            'country' => 'nullable|string|max:25|regex:/^[a-zA-Z\s]+$/',
+            'subject' => 'required|string|max:255|regex:/^[a-zA-Z0-9\s]+$/',
             'message' => 'required|string|max:1000',
         ], [
             'name.regex' => 'The name must contain only letters and spaces.',
-            'phone_number.regex' => 'The phone number must contain only digits.',
-            'msg_subject.regex' => 'The subject must contain only plain text (letters, numbers, and spaces).',
+            'city.regex' => 'The name must contain only letters and spaces.',
+            'city.max' => 'The city name must not exceed 55 characters',
+            'country.regex' => 'The name must contain only letters and spaces.',
+            'country.max' => 'The country name must not exceed 25 characters',
+            'phone_number.regex' => 'The phone number must contain only digits, spaces, parentheses, hyphens, and an optional leading +. ',
+            'phone_number.min' => 'It must be at least 7 digit long. ',
+            'phone_number.max' => 'It must not exceed 17 digits.',
+            'subject.regex' => 'The subject must contain only plain text (letters, numbers, and spaces).',
         ]);
         
         $message = new Contact();
         $message->name = $request->name;
         $message->email = $request->email;
         $message->phone = $request->phone_number;
-        $message->subject = $request->msg_subject;
+        $message->city = $request->city;
+        $message->country = $request->country;
+        $message->subject = $request->subject;
         $message->message = $request->message;
         $message->save();
 

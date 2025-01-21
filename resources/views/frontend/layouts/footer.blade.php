@@ -25,7 +25,7 @@
                         <ul class="footer-list">
                             @foreach ($allService as $item)
                             <li>
-                                <a href="{{ Route('service-page')}}">
+                                <a href="{{ Route('service_content',$item->slug)}}">
                                     <i class="bx bx-chevron-right"></i>
                                     {{$item->title}}
                                 </a>
@@ -75,52 +75,11 @@
                                     Faq
                                 </a>
                             </li>
-                            {{-- <li>
-                                <a href="service-details.html" target="_blank">
-                                    <i class="bx bx-chevron-right"></i>
-                                    Data Analysis
-                                </a>
-                            </li> --}}
+                           
                         </ul>
                     </div>
                 </div>
 
-                {{-- <div class="col-lg-4 col-sm-6">
-                    <div class="footer-widget pl-5">
-                        <h3>Our Blog</h3>
-                        <ul class="footer-blog">
-                            <li>
-                                <a href="blog-details.html">
-                                    <img src="frontend-asset/images/blog/code_bunon_blog_footer_1.jpg" alt="Images">
-                                </a>
-                                <div class="content">
-                                    <h3><a href="{{ url('/blog-details') }}">How a Website Can Transform Your Business</a>
-                                    </h3>
-                                    <span>01 Sep 2024</span>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="blog-details.html">
-                                    <img src="frontend-asset/images/blog/blog-img-footer2.jpg" alt="Images">
-                                </a>
-                                <div class="content">
-                                    <h3><a href="blog-details.html">New Device Invention for Digital Platform</a>
-                                    </h3>
-                                    <span>07 Dec 2024</span>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="blog-details.html">
-                                    <img src="frontend-asset/images/blog/blog-img-footer3.jpg" alt="Images">
-                                </a>
-                                <div class="content">
-                                    <h3><a href="blog-details.html">Business Strategy Make His Goal Acheive</a></h3>
-                                    <span>10 Dec 2024</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div> --}}
                 <div class="col-lg-3 col-sm-6">
                     <div class="footer-widget">
                         <h3>Newsletter</h3>

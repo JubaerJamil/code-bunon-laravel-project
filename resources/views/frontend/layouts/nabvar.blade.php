@@ -35,7 +35,7 @@
 
                                 @foreach ($allService as $item)
                                 <li class="nav-item">
-                                    <a href="{{ Route('service-page')}}" class="nav-link">
+                                    <a href="{{ Route('service_content',$item->slug)}}" class="nav-link">
                                         {{$item->title}}
                                     </a>
                                 </li>
@@ -54,23 +54,7 @@
                             <a href="{{ url('/our-team') }}" class="nav-link {{ Request::route()->named('team_page') ? 'active' : '' }}">
                                 Our Team
                             </a>
-                            {{-- <ul class="dropdown-menu">
-                                <li class="nav-item">
-                                    <a href="blog-1.html" class="nav-link">
-                                        Blog Style One
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="blog-2.html" class="nav-link">
-                                        Blog Style Two
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="blog-details.html" class="nav-link">
-                                        Blog Details
-                                    </a>
-                                </li>
-                            </ul> --}}
+                          
                         </li>
 
                         <li class="nav-item">
@@ -102,15 +86,6 @@
                                     <i class="bx bx-chevron-right"></i></a>
                             </div>
                         </div>
-
-                        {{-- <div class="nav-side-item">
-                            <div class="cart-containerr">
-                                <a href="#" class="cart-icon" style="font-size: 37px;">
-                                    <i class="fa-solid fa-cart-shopping"></i>
-                                </a>
-                                <span class="cart-countt">3</span>
-                            </div>
-                        </div> --}}
 
                     </div>
                 </div>
